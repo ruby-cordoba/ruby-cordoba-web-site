@@ -32,6 +32,14 @@ In the global gemset for the ruby version you are using you should have `bundler
     $ rvm use 1.9.3-p327@ruby-cordoba
     $ gem install bundler
 
+Create a new role in Postgresql
+
+    $ sudo su - postgres
+    $ psql template1
+    $ create role rubycordoba with login createdb;
+    $ exit
+    $ sudo service postgresql restart
+
 And then install the rest of the gems we need:
 
     $ bundle install

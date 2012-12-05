@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: ruby_cordoba_development
   pool: 5
-  username:
+  username: rubycordoba
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   encoding: unicode
   database: ruby_cordoba_test
   pool: 5
-  username:
+  username: rubycordoba
   password:
 
 production:
@@ -36,5 +36,5 @@ production:
   encoding: unicode
   database: ruby_cordoba_production
   pool: 5
-  username:
+  username: rubycordoba
   password:
