@@ -10,6 +10,7 @@ require 'spork'
 Spork.prefork do
   require 'cucumber/rails'
 
+  World(FactoryGirl::Syntax::Methods)
 
   # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
   # order to ease the transition to Capybara we set the default here. If you'd
