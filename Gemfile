@@ -4,6 +4,9 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'jquery-rails'
 
+# Cucumber feature stories in a git-based wiki
+gem 'gitnesse'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -16,5 +19,3 @@ group :test do
   gem 'spork-rails'
   gem 'factory_girl_rails'
 end
-
-
