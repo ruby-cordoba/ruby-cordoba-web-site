@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 
 group :assets do
+  gem 'therubyracer-heroku', :platform => :ruby
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
@@ -16,5 +17,3 @@ group :test do
   gem 'spork-rails'
   gem 'factory_girl_rails'
 end
-
-
