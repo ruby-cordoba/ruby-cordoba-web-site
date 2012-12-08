@@ -19,4 +19,5 @@ group :test do
   gem 'database_cleaner'
   gem 'spork-rails'
   gem 'factory_girl_rails'
+  gem 'minitest' #to fix fedora+rails issue
 end
