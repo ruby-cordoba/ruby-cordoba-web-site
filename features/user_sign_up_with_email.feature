@@ -1,6 +1,6 @@
 Feature: Sign up with email and pasword
   In order to get access to protected sections of the site
-  As an unregistered visitor
+  As an unregistered user
   I want to be able to sign up for an account
 
     Background:
@@ -9,7 +9,7 @@ Feature: Sign up with email and pasword
     Scenario Outline: Visitor signs up with valid credentials
       When I sign up with "<Email>", "<Password>" and "<PasswordConfirmation>"
       Then I get an account
-      And I see "bienvenido"
+      And I see a welcome message
 
       Examples: Valid Credentials
         | Email          | Password | PasswordConfirmation |
@@ -18,7 +18,7 @@ Feature: Sign up with email and pasword
 
     Scenario Outline: Visitor tries to sign up with invalid credentials
       When I sign up with "<Email>", "<Password>" and "<PasswordConfirmation>"
-      Then I see "credenciales invalidas"
+      Then I see an error message
       And I don't get an account
 
       Examples: Invalid Credentials
