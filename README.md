@@ -37,8 +37,9 @@ Create a new role in Postgresql
     $ sudo su - postgres
     $ psql template1
     $ create role rubycordoba with login createdb;
-    $ exit
+    $ \q
     $ sudo service postgresql restart
+    $ exit
 
 And then install the rest of the gems we need:
 
