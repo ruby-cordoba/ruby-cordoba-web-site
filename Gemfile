@@ -7,6 +7,9 @@ gem 'jquery-rails'
 # Cucumber feature stories in a git-based wiki
 gem 'gitnesse'
 
+# Add gem to support Internationalization
+gem 'locale_setter'
+
 group :assets do
   gem 'therubyracer', :platform => :ruby
   gem 'sass-rails',   '~> 3.2.3'
