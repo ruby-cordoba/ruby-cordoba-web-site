@@ -1,6 +1,6 @@
 Feature: Sign in
 #   In order to get access to protected sections of the site
-#   A user
+#   As a user
 #   I want to be able to sign in
 
 #     Scenario: User is not signed up

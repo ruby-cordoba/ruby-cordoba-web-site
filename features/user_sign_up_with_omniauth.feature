@@ -1,2 +1,2 @@
-Feature: Sign up with email and pasword
+Feature: Sign up with omniauth
 #	Pending
