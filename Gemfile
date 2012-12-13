@@ -4,6 +4,7 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'devise'
 
 # Cucumber feature stories in a git-based wiki
 gem 'gitnesse'
