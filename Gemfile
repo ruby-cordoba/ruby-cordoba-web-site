@@ -18,6 +18,8 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'hpricot' # needed for html2haml
+  gem 'ruby_parser' #needed for html2haml
   gem 'cucumber-rails', require: false
   gem 'launchy'
   gem 'rspec-rails'
