@@ -102,6 +102,7 @@ GEM
       haml (~> 3.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.1)
+    hpricot (0.8.6)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.4)
@@ -168,6 +169,8 @@ GEM
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
+    ruby_parser (3.1.0)
+      sexp_processor (~> 4.1)
     rubyzip (0.9.9)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
@@ -182,6 +185,7 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    sexp_processor (4.1.3)
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -229,12 +233,14 @@ DEPENDENCIES
   factory_girl_rails
   gitnesse
   haml-rails
+  hpricot
   jquery-rails
   launchy
   minitest
   pg
   rails (= 3.2.9)
   rspec-rails
+  ruby_parser
   sass-rails (~> 3.2.3)
   simple_form
   spork-rails
