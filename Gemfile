@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
+gem 'simple_form'
 
 # Cucumber feature stories in a git-based wiki
 gem 'gitnesse'
@@ -18,6 +19,7 @@ end
 
 group :test, :development do
   gem 'cucumber-rails', require: false
+  gem 'launchy'
   gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'spork-rails'
