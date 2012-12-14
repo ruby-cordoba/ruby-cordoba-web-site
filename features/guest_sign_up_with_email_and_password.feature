@@ -8,10 +8,10 @@ Feature: Sign up with email and password
 
     Scenario: Guest signs up with valid credentials
       When I sign up with valid credentials
-    #   Then I get an account
-    #   And I see a welcome message
+      Then I get a user in the system
+      And I see a welcome message
 
-    # Scenario: Guest tries to sign up with invalid credentials
-    #   When I sign up with invalid credentials
-    #   Then I see an error message
-    #   And I don't get an account
+    Scenario: Guest tries to sign up with invalid credentials
+      When I sign up with invalid credentials
+      Then I see an authentication error message
+      And I don't get a user in the system

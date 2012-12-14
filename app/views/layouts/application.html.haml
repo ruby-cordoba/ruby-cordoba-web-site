@@ -7,4 +7,9 @@
     = csrf_meta_tags
 
   %body
+    #flashes
+      - flash.each do |name, message|
+        %div{id: name}
+          %strong= message
+
     = yield
