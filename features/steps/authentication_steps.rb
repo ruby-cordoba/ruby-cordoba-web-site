@@ -53,30 +53,3 @@ end
 Then /^I see an invalid sign in message$/ do
   expect(page).to have_content(invalid_sign_in_message)
 end
-
-
-#Support
-
-def sign_in_page
-  new_user_session_path
-end
-
-def sign_in(user)
-  fill_in :user_email, with: user.email
-  fill_in :user_password, with: user.password
-
-  click_button 'Sign in'
-end
-
-def guest_has_an_account
-  @guest = guest	
-  User.new(:email => @guest.email, :password => @guest.password, :password_confirmation => @guest.password).save!	
-end
-
-def successful_sign_in_message
-  'Signed in'
-end
-
-def invalid_sign_in_message
-  'Invalid email or password'
-end
