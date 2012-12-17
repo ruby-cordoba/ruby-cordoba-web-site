@@ -54,7 +54,11 @@ module AuthenticationSupport
   def invalid_sign_in_message
     'Invalid email or password'
   end
-  
+
+  def sign_out_message
+    'Signed out'
+  end
+ 
 end
 
 World AuthenticationSupport

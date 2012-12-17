@@ -53,3 +53,19 @@ end
 Then /^I see an invalid sign in message$/ do
   expect(page).to have_content(invalid_sign_in_message)
 end
+
+#Sign Out steps
+
+Given /^I am logged in$/ do
+  guest_has_an_account
+  visit sign_in_page
+  sign_in guest
+end
+
+When /^I sign out$/ do
+  visit destroy_user_session_path 
+end
+
+Then /^I should see a signed out message$/ do
+  expect(page).to have_content(sign_out_message)
+end
