@@ -10,7 +10,9 @@ Feature: Sign in
      Scenario: Guest signs in with valid credentials
      	When I sign in with valid credentials
 		Then I see a successful sign in message
+		And I see my email and sign out link
 
      Scenario: Guest signs in with invalid credentials    
 		When I sign in with invalid credentials
 	    Then I see an invalid sign in message
+	    And I don't see my email and sign out link

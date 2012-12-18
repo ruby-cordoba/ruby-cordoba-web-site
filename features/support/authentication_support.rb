@@ -31,10 +31,6 @@ module AuthenticationSupport
     'is invalid'
   end
 
-  def sign_in_page
-    new_user_session_path
-  end
-
   def sign_in(user)
     fill_in :user_email, with: user.email
     fill_in :user_password, with: user.password
@@ -42,9 +38,8 @@ module AuthenticationSupport
     click_button 'Sign in'
   end
 
-  def guest_has_an_account
-    @guest = guest  
-    User.new(:email => @guest.email, :password => @guest.password, :password_confirmation => @guest.password).save! 
+  def create_user_account(user)
+    User.new(:email => user.email, :password => user.password, :password_confirmation => user.password).save! 
   end
 
   def successful_sign_in_message
@@ -58,7 +53,11 @@ module AuthenticationSupport
   def sign_out_message
     'Signed out'
   end
- 
+
+  def sign_out_link
+    'Sign Out'
+  end
+   
 end
 
 World AuthenticationSupport

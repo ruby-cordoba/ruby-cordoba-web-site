@@ -31,11 +31,11 @@ end
 #Sign In steps
 
 Given /^I am at the sign in page$/ do
-  visit sign_in_page
+  visit new_user_session_path
 end
 
 And /^I have an account$/ do
-  guest_has_an_account
+  create_user_account guest
 end
 
 When /^I sign in with valid credentials$/ do
@@ -44,6 +44,10 @@ end
 
 Then /^I see a successful sign in message$/ do
   expect(page).to have_content(successful_sign_in_message)
+end
+
+Then /^I see my email and sign out link$/ do
+  expect(page).to have_content(guest.email) && have_content(sign_out_link)
 end
 
 When /^I sign in with invalid credentials$/ do
@@ -56,16 +60,19 @@ end
 
 #Sign Out steps
 
-Given /^I am logged in$/ do
-  guest_has_an_account
-  visit sign_in_page
+Given /^I am signed in$/ do
+  visit new_user_session_path
   sign_in guest
 end
 
 When /^I sign out$/ do
-  visit destroy_user_session_path 
+  click_link sign_out_link
 end
 
-Then /^I should see a signed out message$/ do
+Then /^I see a signed out message$/ do
   expect(page).to have_content(sign_out_message)
+end
+
+Then /^I don't see my email and sign out link$/ do
+  expect(page).to_not have_content(guest.email) || have_content(sign_out_link)
 end

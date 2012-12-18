@@ -3,7 +3,11 @@ Feature: Sign out
 	As signed in user
 	I want to be able to sign out
 
+	Background:
+		Given I have an account
+
 	Scenario: User signs out
-		Given I am logged in
+		Given I am signed in
 	    When I sign out
-	    Then I should see a signed out message
+	    Then I see a signed out message
+	    And I don't see my email and sign out link
